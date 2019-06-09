@@ -1,0 +1,47 @@
+---------------Hướng dẫn setup project trên PyCharm-------------------
+->Cài đặt Xampp version >= 5.
+->Cài xong tạo Database với tên: smarttv
+->Mở project và install các thư viện cần thiết
+	+ Django
+	+ PyMySql
+	+ Chỗ nào lỗi thì Alt + Enter -> install package
+
+-> Mở file setting (myproject) tìm đến config DB -> kiểm tra cấu hình giống với Xampp đã cài đặc chưa (Port 3306)
+-> Mở Terminal trỏ đến \Study\Python\Study\Django\myproject>
+gõ : python manage.py makemigrations -> để tạo file migrate (folder migrate)
+xong đến: python manage.py migrate -> run file migrate vào DB (create table )
+->Vào Xampp -> trỏ đến SQL run đoạn này cho có dữ liệu xài
+
+INSERT INTO `myapp_sanpham` (`idSP`, `idLoaiSP`, `tenSP`, `DonGia`, `GioiThieu`, `GiamGia`, `image_link`, `image_list`, `timeNhap`, `luotxem`, `SLTon`, `idtin`) VALUES
+(28, 28, 'TIVI QLED SAMSUNG QA65Q8CAMKX', '92900000', '', 0, 'image\\Manghinhcong\\8.jpg', '', 0, 0, 0, 0),
+(29, 28, 'TIVI LED SAMSUNG 65 INCH UA65MU', '69900000', '', 0, 'image\\Manghinhcong\\9.jpg', '', 0, 0, 0, 0),
+(30, 28, 'TIVI SUHD SAMSUNG 78 INCH UA78K', '134900000', '', 0, 'image\\Manghinhcong\\10.jpg', '', 0, 0, 0, 0),
+(25, 28, 'TIVI LED SAMSUNG 55 INCH UA55MU', '44900000', '', 0, 'image\\Manghinhcong\\5.jpg', '', 0, 0, 0, 0),
+(26, 28, 'TIVI UHD SAMSUNG 43 INCH UA43KU', '13410000', '', 0, 'image\\Manghinhcong\\6.jpg', '', 0, 0, 0, 0),
+(27, 28, 'SMART TIVI SAMSUNG 49 INCH UA49K6', '13860000', '', 0, 'image\\Manghinhcong\\7.jpg', '', 0, 0, 0, 0),
+(21, 28, 'TIVI LED SAMSUNG UHD UA55MU9000KX', '49000000', '', 0, 'image\\Manghinhcong\\1.jpg', '', 0, 0, 0, 0),
+(22, 28, 'TIVI LED SAMSUNG 55 INCH UA55M6', '10990000', '', 0, 'image\\Manghinhcong\\2.jpg', '', 0, 0, 0, 0),
+(23, 28, 'TIVI LED SAMSUNG 65 INCH UA65MU', '74900000', '', 0, 'image\\Manghinhcong\\3.jpg', '', 0, 0, 0, 0),
+(24, 28, 'TIVI QLED SAMSUNG QA55Q8CAMKX', '64900000', '', 0, 'image\\Manghinhcong\\4.jpg', '', 0, 0, 0, 0),
+(17, 26, 'TIVI UHD SAMSUNG 55 INCH UA55KU600', '19710000', '', 0, 'image\\3D\\7.jpg', '', 0, 0, 0, 0),
+(18, 26, 'TIVI LED SAMSUNG 75 INCH UA75MU', '20900000', '', 0, 'image\\3D\\8.jpg', '', 0, 0, 0, 0),
+(19, 26, 'TIVI SUHD SAMSUNG 49 INCH UA49K', '24021000', '', 0, 'image\\3D\\9.jpg', '', 0, 0, 0, 0),
+(20, 26, 'TIVI QLED SAMSUNG 75 INCH QA75Q9', '19000000', '', 0, 'image\\3D\\10.jpg', '', 0, 0, 0, 0),
+(13, 26, 'TIVI FULL HD SAMSUNG 40 INCH UA4', '8400000', '', 0, 'image\\3D\\3.jpg', '', 0, 1, 0, 0),
+(14, 26, 'TIVI UHD SAMSUNG 43 INCH UA43KU60', '10710000', '', 0, 'image\\3D\\4.jpg', '', 0, 0, 0, 0),
+(15, 26, 'TIVI UHD SAMSUNG 49 INCH UA49KU64', '15210000', '', 0, 'image\\3D\\5.jpg', '', 0, 0, 0, 0),
+(16, 26, 'TIVI UHD SAMSUNG 50 INCH UA50KU600', '15210000', '', 0, 'image\\3D\\6.jpg', '', 0, 0, 0, 0),
+(10, 2, 'SMART TIVI 49INCH TOSHIBA 49U77', '12990000', '', 0, 'image\\Khuyenmai\\10.jpg', '', 0, 1, 0, 0),
+(11, 26, 'TIVI UHD SAMSUNG 43 INCH UA43KU64', '11610000', '', 0, 'image\\3D\\1.jpg', '', 0, 0, 0, 0),
+(12, 26, 'TIVI QLED SAMSUNG QA49Q7FAMKXXV', '10990000', '', 0, 'image\\3D\\2.jpg', '', 0, 0, 0, 0),
+(6, 1, 'TIVI LED SHARP 32 INCH LC-32LE280', '7500000', '', 0, 'image\\Khuyenmai\\6.jpg', '', 0, 1, 0, 0),
+(7, 1, 'SMART TIVI 49INCH PANASONIC TH', '10999000', '', 0, 'image\\Khuyenmai\\7.jpg', '', 0, 0, 50, 0),
+(8, 1, 'SMART TIVI TOSHIBA 40 INCH 40L5650V', '11789000', '', 0, 'image\\Khuyenmai\\8.jpg', '', 0, 1, 49, 0),
+(9, 2, 'TIVI LED PANASONIC 43 INCH TH-43', '8490000', '', 0, 'image\\Khuyenmai\\9.jpg', '', 0, 5, 48, 0),
+(3, 1, 'TIVI 4K LG 43 INCH 43UJ632T-TH4', '11200000', '', 0, 'image\\Khuyenmai\\3.jpg', '', 0, 2, 0, 0),
+(4, 1, 'TIVI SONY 43 INCH KDL-43W750E VN3', '12900000', '', 0, 'image\\Khuyenmai\\4.jpg', '', 0, 1, 0, 0),
+(5, 1, 'TIVI LED SHARP 32 INCH LC-32LE280', '4290000', '', 0, 'image\\Khuyenmai\\5.jpg', '', 0, 0, 0, 0),
+(2, 1, 'TIVI SONY 40 INCH KDL-40W660E VN3', '10999000', '', 0, 'image\\Khuyenmai\\2.jpg', '', 0, 1, 0, 0),
+(1, 1, 'TIVI LED LG 49 INCH 49LH511T', '8990000', '', 0, 'image\\Khuyenmai\\1.jpg', '', 0, 1, 0, 0);
+
+-->build: python manage.py runserver
